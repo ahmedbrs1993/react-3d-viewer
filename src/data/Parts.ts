@@ -1,33 +1,4 @@
-export type SubPart = {
-  id: string;
-  name: string;
-  reference: string;
-  description: string;
-  image: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  arrowX: number;
-  arrowY: number;
-  price: number;
-};
-
-export type Part = {
-  id: string;
-  name: string;
-  reference: string;
-  description: string;
-  image: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  arrowX: number;
-  arrowY: number;
-  subParts?: SubPart[];
-  price?: number;
-};
+import { Part } from "@/types/Machine";
 
 export const parts: Part[] = [
   {

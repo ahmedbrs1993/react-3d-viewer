@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { parks } from "@/data/Machines";
 
-const Hero = () => {
+type HeroProps = {
+  isAuthenticated: boolean;
+};
+
+const Hero: React.FC<HeroProps> = ({ isAuthenticated }) => {
   const [serialNumber, setSerialNumber] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSerialNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,14 +17,27 @@ const Hero = () => {
     if (value.length > 5 && !value.includes("-")) {
       value = value.slice(0, 5) + "-" + value.slice(5);
     }
-    if (value.length <= 8) {
+    if (value.length <= 9) {
       setSerialNumber(value);
     }
   };
 
   const handleSearch = () => {
-    if (serialNumber === "11111-01") {
-      navigate("/machines/1");
+    if (!isAuthenticated) {
+      setError("Veuillez vous connecter pour rechercher une machine.");
+      return;
+    }
+    const match = parks
+      .flatMap((park) => park.machines.map((m) => ({ ...m, parkId: park.id })))
+      .find((machine) => machine.serialNumber === serialNumber);
+
+    if (match) {
+      setError("");
+      navigate(`/machines/${match.id}`, {
+        state: { machineName: match.name },
+      });
+    } else {
+      setError("Aucune machine trouvée avec ce numéro.");
     }
   };
 
@@ -56,10 +75,11 @@ const Hero = () => {
                 placeholder="XXXXX-XX"
                 value={serialNumber}
                 onChange={handleSerialNumberChange}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyPress}
                 className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button
+                type="button"
                 className="absolute right-2 top-2 text-gray-400 hover:text-blue-900"
                 onClick={handleSearch}
               >
@@ -69,6 +89,9 @@ const Hero = () => {
             <p className="mt-2 text-sm text-gray-500">
               Format: XXXXX-XX (exemple: AB123-4X)
             </p>
+            {error && (
+              <p className="mt-2 text-sm text-red-600 font-medium">{error}</p>
+            )}
           </div>
         </div>
       </div>

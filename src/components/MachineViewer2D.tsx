@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { parts as initialParts, Part, SubPart } from "@/data/Parts";
-import { toCartItem } from "@/helpers/AddItem";
+import { parts as initialParts } from "@/data/Parts";
+import type { Part, SubPart } from "@/types/Machine";
 import { useCart } from "@/context/CartContext";
 
 const MachineViewer2D: React.FC = () => {
@@ -107,7 +107,6 @@ const MachineViewer2D: React.FC = () => {
 
   return (
     <div className="flex gap-6 w-full h-full ">
-      {/* Sidebar */}
       <aside className="min-w-[250px] max-w-[300px] bg-white p-4 shadow rounded space-y-4 flex-shrink-0">
         {focusedPart?.subParts?.length ? (
           <>
@@ -162,7 +161,6 @@ const MachineViewer2D: React.FC = () => {
         )}
       </aside>
 
-      {/* SVG */}
       <div className="relative flex-grow flex justify-center">
         <svg
           ref={svgRef}
@@ -288,7 +286,6 @@ const MachineViewer2D: React.FC = () => {
         </svg>
       </div>
 
-      {/* Detail Panel */}
       <aside className="w-96 bg-white p-6 rounded shadow space-y-4 flex-shrink-0">
         {selectedPart || selectedSubPart ? (
           <>
@@ -312,9 +309,7 @@ const MachineViewer2D: React.FC = () => {
                 </p>
                 <div className="mt-4 flex items-center justify-end">
                   <button
-                    onClick={() =>
-                      addItem(toCartItem(selectedSubPart || selectedPart!))
-                    }
+                    onClick={() => addItem(selectedSubPart || selectedPart!)}
                     className="flex items-center space-x-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800"
                   >
                     <span>Ajouter au panier</span>

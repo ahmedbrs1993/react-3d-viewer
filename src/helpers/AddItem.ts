@@ -1,22 +1,10 @@
-import { Part, SubPart } from "@/data/Parts";
-
-export type CartItem = {
-  id: number;
-  name: string;
-  reference: string;
-  description: string;
-  image: string;
-  price: number;
-  quantity: number;
-};
+import { CartItem, Part, SubPart  } from "@/types/Machine";
 
 export const toCartItem = (
   item: Part | SubPart
 ): Omit<CartItem, "quantity"> => {
-  const numericId = parseInt(item.id.replace(/\D/g, "")) || Date.now();
-
   return {
-    id: numericId,
+    id: item.id,
     name: item.name,
     reference: item.reference,
     description: item.description,

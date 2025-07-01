@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Mesh } from "@babylonjs/core";
-import { Part } from "@/data/Parts";
+import type { Part } from "@/types/Machine";
 import { toCartItem } from "@/helpers/AddItem";
 import { generatePartFromMesh } from "@/components/PartUtils";
 
@@ -68,7 +68,7 @@ const PartSidebar: React.FC<PartSidebarProps> = ({
       </p>
 
       <button
-        onClick={() => addItem(toCartItem(part))}
+        onClick={() => addItem(part)}
         className="w-full px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 text-sm mb-2"
       >
         Ajouter au panier

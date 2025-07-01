@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Search,
-  ShoppingCart,
-  User,
-  Home,
-  Package,
-  Settings,
-} from "lucide-react";
+import { ShoppingCart, User, Home, Package, Settings } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
@@ -59,9 +52,6 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <button className="p-2 rounded-full hover:bg-blue-800">
-              <Search size={20} />
-            </button>
             <button
               className="p-2 rounded-full hover:bg-blue-800"
               onClick={handleAuthClick}

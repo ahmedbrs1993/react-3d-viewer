@@ -5,7 +5,6 @@ import MachineViewer3D from "@/components/MachineViewer3D";
 import MachineViewer2D from "@/components/MachineViewer2D";
 import { useCart } from "@/context/CartContext";
 import { parts } from "@/data/Parts";
-import { toCartItem } from "@/helpers/AddItem";
 
 const MachineDetail = () => {
   const { addItem } = useCart();
@@ -27,9 +26,7 @@ const MachineDetail = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-      {/* Image + Description in two columns */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white rounded-lg shadow-lg overflow-hidden p-6">
-        {/* Left: Machine Image + View buttons */}
         <div>
           <img
             src="/images/rts.png"
@@ -54,7 +51,6 @@ const MachineDetail = () => {
           </div>
         </div>
 
-        {/* Right: Description */}
         <div className="space-y-4 text-gray-800">
           <h2 className="text-2xl font-bold text-gray-900">{machineName}</h2>
 
@@ -106,7 +102,6 @@ const MachineDetail = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center p-8">
           <div className="relative w-[90%] h-[65%] bg-white rounded-xl overflow-hidden p-6">
@@ -127,7 +122,6 @@ const MachineDetail = () => {
         </div>
       )}
 
-      {/* Components section */}
       <div className="bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
           Composants disponibles
@@ -166,7 +160,7 @@ const MachineDetail = () => {
                         </p>
                         <div className="mt-4 flex items-center justify-end">
                           <button
-                            onClick={() => addItem(toCartItem(sub))}
+                            onClick={() => addItem(sub)}
                             className="flex items-center space-x-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800"
                           >
                             <Plus size={16} />
@@ -198,7 +192,7 @@ const MachineDetail = () => {
                       </p>
                       <div className="mt-4 flex items-center justify-end">
                         <button
-                          onClick={() => addItem(toCartItem(part))}
+                          onClick={() => addItem(part)}
                           className="flex items-center space-x-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800"
                         >
                           <Plus size={16} />

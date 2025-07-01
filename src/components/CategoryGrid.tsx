@@ -10,17 +10,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-type SubCategory = {
-  name: string;
-  path: string;
-};
-
-type Category = {
-  name: string;
-  icon: JSX.Element;
-  subCategories: SubCategory[];
-};
+import { Category, SubCategory } from "@/types/Machine";
 
 const categories: Category[] = [
   {

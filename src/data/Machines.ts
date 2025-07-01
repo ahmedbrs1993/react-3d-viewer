@@ -52,7 +52,7 @@ export const parks = [
       {
         id: 5,
         name: "PAC AQUACIAT2 ILD",
-        serialNumber: "SN234567891",
+        serialNumber: "14633-05",
         installationDate: "01/07/2023",
         lastMaintenance: "01/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -61,7 +61,7 @@ export const parks = [
       {
         id: 6,
         name: "CTA CLIMACIAT AIRTECH",
-        serialNumber: "SN345678912",
+        serialNumber: "14633-06",
         installationDate: "15/08/2023",
         lastMaintenance: "15/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -70,7 +70,7 @@ export const parks = [
       {
         id: 7,
         name: "ROOF TOP SPACE+",
-        serialNumber: "SN567891234",
+        serialNumber: "14633-07",
         installationDate: "20/09/2023",
         lastMaintenance: "20/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -87,7 +87,7 @@ export const parks = [
       {
         id: 8,
         name: "PAC DYNACIAT Power",
-        serialNumber: "SN678912345",
+        serialNumber: "14633-08",
         installationDate: "05/04/2023",
         lastMaintenance: "05/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -96,7 +96,7 @@ export const parks = [
       {
         id: 9,
         name: "CTA CLIMACIAT HD",
-        serialNumber: "SN891234567",
+        serialNumber: "14633-09",
         installationDate: "10/05/2023",
         lastMaintenance: "10/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -105,7 +105,7 @@ export const parks = [
       {
         id: 10,
         name: "PAC AQUACIAT Power",
-        serialNumber: "SN912345678",
+        serialNumber: "14633-10",
         installationDate: "15/06/2023",
         lastMaintenance: "15/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -114,7 +114,7 @@ export const parks = [
       {
         id: 11,
         name: "ROOF TOP SPACE MAX",
-        serialNumber: "SN123456780",
+        serialNumber: "14633-11",
         installationDate: "20/07/2023",
         lastMaintenance: "20/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -123,7 +123,7 @@ export const parks = [
       {
         id: 12,
         name: "CTA CLIMACIAT XL",
-        serialNumber: "SN234567890",
+        serialNumber: "14633-12",
         installationDate: "25/08/2023",
         lastMaintenance: "25/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -132,7 +132,7 @@ export const parks = [
       {
         id: 13,
         name: "PAC DYNACIAT XL",
-        serialNumber: "SN345678901",
+        serialNumber: "14633-13",
         installationDate: "30/09/2023",
         lastMaintenance: "30/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -149,7 +149,7 @@ export const parks = [
       {
         id: 14,
         name: "PAC AQUACIAT2 XL",
-        serialNumber: "SN456789012",
+        serialNumber: "14633-14",
         installationDate: "01/03/2023",
         lastMaintenance: "01/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -158,7 +158,7 @@ export const parks = [
       {
         id: 15,
         name: "CTA CLIMACIAT PRO",
-        serialNumber: "SN567890123",
+        serialNumber: "14633-15",
         installationDate: "05/04/2023",
         lastMaintenance: "05/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -167,7 +167,7 @@ export const parks = [
       {
         id: 16,
         name: "ROOF TOP SPACE PRO",
-        serialNumber: "SN678901234",
+        serialNumber: "14633-16",
         installationDate: "10/05/2023",
         lastMaintenance: "10/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -176,7 +176,7 @@ export const parks = [
       {
         id: 17,
         name: "PAC DYNACIAT PRO",
-        serialNumber: "SN789012345",
+        serialNumber: "14633-17",
         installationDate: "15/06/2023",
         lastMaintenance: "15/01/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",
@@ -185,7 +185,7 @@ export const parks = [
       {
         id: 18,
         name: "CTA CLIMACIAT MAX",
-        serialNumber: "SN890123456",
+        serialNumber: "14633-18",
         installationDate: "20/07/2023",
         lastMaintenance: "20/02/2024",
         image: "https://i.postimg.cc/85sCCNdp/2025-05-12-12h07-54.png",

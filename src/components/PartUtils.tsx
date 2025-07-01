@@ -1,5 +1,5 @@
 import { Mesh } from "@babylonjs/core";
-import { Part } from "@/data/Parts";
+import type { Part } from "@/types/Machine";
 
 export function formatMeshName(raw: string): string {
   let cleaned = raw.replace(/<.*?>/g, "").trim();

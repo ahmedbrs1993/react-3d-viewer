@@ -5,7 +5,10 @@ const Cart = () => {
   const { items, updateQuantity, removeItem } = useCart();
 
   const getTotal = () => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return items.reduce(
+      (total, item) => total + (item.price ?? 0) * item.quantity,
+      0
+    );
   };
 
   if (items.length === 0) {
@@ -30,7 +33,7 @@ const Cart = () => {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-6">
           {items.map((item) => {
-            const totalPrice = item.price * item.quantity;
+            const totalPrice = (item.price ?? 0) * item.quantity;
 
             return (
               <div
